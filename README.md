@@ -19,25 +19,12 @@ Doğru ve güvenli nesne kopyalama ve imha sağlayan **4 özel üye işlevinden*
 
 ### 1. Default Constructor
 
-```cpp
-Fixed::Fixed() : _rawBits(0) {
-    std::cout << "Default constructor called" << std::endl;
-}
-```
-
-- Nesne oluşturulduğunda çağrılır: `Fixed a;`
+- Nesne oluşturulduğunda çağrılır.
 - Üye değişkenleri başlangıç değerine ayarlar.
 
 ---
 
 ### 2. Copy Constructor
-
-```cpp
-Fixed::Fixed(const Fixed& other) {
-    std::cout << "Copy constructor called" << std::endl;
-    *this = other;  // assignment operator'ı kullanır
-}
-```
 
 - Var olan bir nesneden **yeni** nesne oluşturulduğunda çağrılır:
   ```cpp
@@ -50,15 +37,6 @@ Fixed::Fixed(const Fixed& other) {
 
 ### 3. Copy Assignment Operator
 
-```cpp
-Fixed& Fixed::operator=(const Fixed& other) {
-    std::cout << "Copy assignment operator called" << std::endl;
-    if (this != &other)          // kendine atama kontrolü!
-        this->_rawBits = other.getRawBits();
-    return *this;
-}
-```
-
 - Var olan bir nesneye **başka** var olan nesne atandığında çağrılır:
   ```cpp
   Fixed c;
@@ -70,12 +48,6 @@ Fixed& Fixed::operator=(const Fixed& other) {
 ---
 
 ### 4. Destructor
-
-```cpp
-Fixed::~Fixed() {
-    std::cout << "Destructor called" << std::endl;
-}
-```
 
 - Nesne scope'dan çıktığında otomatik çağrılır.
 - Dinamik bellek varsa (`new` ile ayrılan) burada `delete` edilir.

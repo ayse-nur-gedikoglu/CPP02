@@ -87,13 +87,13 @@ Fixed Fixed::operator-(const Fixed &other) const {
     return result;
 }
 
-Fixed Fixed::operator*(const Fixed &other) const {
+// Fixed Fixed::operator*(const Fixed &other) const {
 
-}
+// }
 
-Fixed Fixed::operator/(const Fixed &other) const {
+// Fixed Fixed::operator/(const Fixed &other) const {
 
-}
+// }
 
 Fixed &Fixed::operator++() {
     this->fixed_point++;

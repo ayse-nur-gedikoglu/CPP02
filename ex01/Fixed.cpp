@@ -6,6 +6,16 @@ Fixed::Fixed() : fixed_point(0) {
     std::cout << "Default constructor called" << std::endl;
 }
 
+//to do
+Fixed::Fixed(const int integer){
+    std::cout << "Int constructor called" << std::endl;
+}
+
+//to do
+Fixed::Fixed(const float floating_point){
+    std::cout << "Float constructor called" << std::endl;
+}
+
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
 }
@@ -19,7 +29,9 @@ Fixed::Fixed(const Fixed &object) {
 Fixed &Fixed::operator=(const Fixed &object) {
     std::cout << "Copy assignment operator called" << std::endl;
 
-    this->fixed_point = object.getRawBits();
+    if (this != &object){
+        this->fixed_point = object.getRawBits();
+    }
     return *this;
 }
 

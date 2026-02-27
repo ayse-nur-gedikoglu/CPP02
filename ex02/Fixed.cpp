@@ -87,13 +87,17 @@ Fixed Fixed::operator-(const Fixed &other) const {
     return result;
 }
 
-// Fixed Fixed::operator*(const Fixed &other) const {
+Fixed Fixed::operator*(const Fixed &other) const {
+    Fixed result;
+    result.fixed_point = (this->fixed_point * other.fixed_point) >> fractional_bits;
+    return result;
+}
 
-// }
-
-// Fixed Fixed::operator/(const Fixed &other) const {
-
-// }
+Fixed Fixed::operator/(const Fixed &other) const {
+    Fixed result;
+    result.fixed_point = (this->fixed_point << fractional_bits) / other.fixed_point;
+    return result;
+}
 
 Fixed &Fixed::operator++() {
     this->fixed_point++;

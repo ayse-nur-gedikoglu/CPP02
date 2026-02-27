@@ -23,6 +23,5 @@ class Fixed
 };
 
 std::ostream &operator<<(std::ostream &os, const Fixed &fixed);
-//std::cout << fixed_objesi yazarsa, ekrana doğrudan bu sayının float halini bas
 
 #endif

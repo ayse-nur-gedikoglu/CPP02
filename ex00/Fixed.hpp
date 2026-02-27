@@ -7,10 +7,10 @@ class Fixed
         int fixed_point;
         static const int fractional_bits = 8;
     public:
-        Fixed(); //default constructor
-        ~Fixed(); //destructor
-        Fixed(const Fixed &other); //copy constructor
-        Fixed &operator=(const Fixed &other); //copy assignment operator
+        Fixed();
+        ~Fixed();
+        Fixed(const Fixed &other);
+        Fixed &operator=(const Fixed &other);
         
         int getRawBits(void) const;
         void setRawBits(int const raw);

@@ -45,6 +45,14 @@ Doğru ve güvenli nesne kopyalama ve imha sağlayan **4 özel üye işlevinden*
 - `return *this` → zincirleme atama için: `a = b = c;`
 - **Kendine atama kontrolü** şart! (`if (this != &other)`)
 
+#### Copy Assignment Operator Ne İçin Kullanılır?
+- İki ayrı, zaten var olan nesne arasında değer aktarmak için.
+
+##### Copy Constructor ile Farkı
+- Ne zaman çağrılır?
+  - Copy Constructor: Yeni bir nesne oluşturulurken, başka nesneden kopyalanarak
+  - Copy Assignment Operator: İki nesne de zaten var, birinin değeri diğerine atanıyor
+
 ---
 
 ### 4. Destructor
